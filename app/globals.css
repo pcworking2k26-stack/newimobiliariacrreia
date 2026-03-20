@@ -1,0 +1,95 @@
+/* ROTA: app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3.5%;
+    --foreground: 40 10% 93%;
+
+    --card: 0 0% 6.5%;
+    --card-foreground: 40 10% 93%;
+
+    --popover: 0 0% 6.5%;
+    --popover-foreground: 40 10% 93%;
+
+    --primary: 40 50% 52%;
+    --primary-foreground: 0 0% 3.5%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 10% 93%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 40 20% 12%;
+    --accent-foreground: 40 50% 52%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 40 50% 52%;
+
+    --radius: 0.5rem;
+
+    --gold: 40 50% 52%;
+    --gold-light: 40 60% 68%;
+    --gold-muted: 37 15% 14%;
+    --obsidian: 0 0% 3.5%;
+    --obsidian-light: 0 0% 6.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: hsl(40 50% 52%);
+    color: hsl(0 0% 3.5%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 3.5%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 18%);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(40 50% 52%);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(40 50% 52%), hsl(40 60% 68%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(40 50% 52% / 0.4), transparent);
+  }
+}
